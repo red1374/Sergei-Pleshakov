@@ -10,6 +10,7 @@ def number_formated(_number):
 
     return numbers_string
 
+
 # Делится ли сумма цифр на заданное число
 def is_sum_divided_by(_number, _digit):
     if not str(_number).isdigit() or (not str(_digit).isdigit() or _digit == 0):
