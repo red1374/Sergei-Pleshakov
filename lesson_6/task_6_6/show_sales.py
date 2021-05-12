@@ -1,8 +1,7 @@
 import sys
-from utils import print_rows, check_row, ROW_LENGTH
+from utils import print_rows, check_row
 
 _, *other = sys.argv
-ROW_LENGTH = 20
 
 if len(other) == 0:
     # Output all list items
