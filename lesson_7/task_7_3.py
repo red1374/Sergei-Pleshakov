@@ -60,7 +60,9 @@ def copytree(src_path='', dst_path='', replace_exists_file=False, remove_old_fil
     return src_path
 
 
-def relocate_templates(name='', config_list=[], remove_files=False):
+def relocate_templates(name='', config_list=False, remove_files=False):
+    if config_list is None:
+        config_list = []
     if not config_list or not name:
         return None
 

@@ -2,7 +2,6 @@ import json
 import yaml
 import os
 
-yaml.dump
 # class ProjectConfigError(Exception):
 #     def __init__(self, error='File not found!'):
 #         self.message = f'Project config file error: {error}'
@@ -29,8 +28,6 @@ def get_config(file_name):
             return yaml.safe_load(f_config)
         elif ext == 'json':
             return json.load(f_config)
-        else:
-            return None
 
 
 def create_starter(name='my_project', config_list=''):
@@ -63,7 +60,7 @@ def get_dict_key(value=0):
     :return:
     """
     if not value:
-        None
+        return None
 
     i = 1
     while True:
@@ -71,4 +68,3 @@ def get_dict_key(value=0):
             break
         i += 1
     return 10 ** i
-

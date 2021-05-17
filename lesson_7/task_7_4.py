@@ -9,23 +9,6 @@ class DirNotFoundError(Exception):
         super().__init__(self.message)
 
 
-def get_dict_key(value=0):
-    """
-    Get upper border of given value
-    :param value: file size
-    :return:
-    """
-    if not value:
-        None
-
-    i = 1
-    while True:
-        if 10 ** i >= value:
-            break
-        i += 1
-    return 10 ** i
-
-
 def get_dir_stat(dir_path=''):
     """
     Get files count of given directory grouped by file size
