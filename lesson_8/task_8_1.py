@@ -1,7 +1,7 @@
 import re
 
 
-class ValueError(ValueError):
+class WrongEmailError(Exception):
     def __init__(self, email):
         self.message = f'wrong email: "{email}"!'
         super().__init__(self.message)
@@ -15,10 +15,10 @@ email_list = ['someone@geekbrains.ru', 'test@unocore.org', 'менеджер@г�
 def email_parse(email_string=''):
     result = RE_EMAIL.match(email_string)
 
-    if isinstance(result, re.Match):
+    if result:
         return result.groupdict()
     else:
-        raise ValueError(email_string)
+        raise WrongEmailError(email_string)
 
 
 for email in email_list:

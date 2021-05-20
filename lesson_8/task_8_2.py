@@ -9,7 +9,7 @@ def get_row_info(row):
 
 
 with open('files/nginx_logs.txt', 'r', encoding="UTF") as f:
-    for indx, line in enumerate(f):
+    for idx, line in enumerate(f):
         print(line, get_row_info(line))
-        if indx == 10:
+        if idx == 10:
             break
