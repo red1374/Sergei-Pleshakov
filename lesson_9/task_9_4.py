@@ -1,9 +1,10 @@
 class Car:
-    def __init__(self, speed, color, is_police, name):
+    is_police = False
+
+    def __init__(self, speed, color, name):
         self.speed = speed
         self.color = color
         self.name = name
-        self.is_police = is_police
 
     def go(self):
         print('Car starts moving')
@@ -55,11 +56,11 @@ class WorkCar(Car):
 
 
 class PoliceCar(Car):
-    pass
+    is_police = True
 
 
 print('-- Car 1 ---------------------------')
-car1 = Car(50, 'green', False, 'Mazda RX6')
+car1 = Car(50, 'green', 'Mazda RX6')
 print(car1.name, car1.speed)
 car1.go()
 car1.turn('Right')
@@ -67,7 +68,7 @@ car1.stop()
 car1.show_speed()
 
 print('-- Car 2 ---------------------------')
-car2 = TownCar(85, 'blue', False, 'Skoda Fabia II')
+car2 = TownCar(85, 'blue', 'Skoda Fabia II')
 print(car2.name, car2.speed)
 car2.go()
 car2.turn('Right')
@@ -77,7 +78,7 @@ car2.is_police_car()
 car2.show_speed()
 
 print('-- Car 3 ---------------------------')
-car3 = WorkCar(80, 'red', False, 'Ferrari X1')
+car3 = WorkCar(80, 'red', 'Ferrari X1')
 print(car3.name, car3.speed)
 car3.go()
 car3.turn('Right')
@@ -86,7 +87,7 @@ car3.show_speed()
 print(car2.name, car3.name)
 
 print('-- Car 4 ---------------------------')
-car4 = PoliceCar(120, 'special', True, 'Skoda Octavia')
+car4 = PoliceCar(120, 'special', 'Skoda Octavia')
 print(car4.name, car4.speed)
 car4.go()
 car4.turn('Left')
@@ -95,7 +96,7 @@ car4.is_police_car()
 car4.show_speed()
 
 print('-- Car 5 ---------------------------')
-car5 = SportCar(320, 'white', False, 'McLaren S40')
+car5 = SportCar(320, 'white', 'McLaren S40')
 print(car5.name, car5.speed)
 car5.go()
 car5.turn('Left')

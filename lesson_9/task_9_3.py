@@ -16,6 +16,6 @@ class Position(Worker):
 
 position1 = Position('Иван', 'Петров', 'менеджер', [5000, 3000])
 print(dir(position1))
-print(position1.name, position1.surname, position1.position, position1._income)
+print(position1.name, position1.surname, position1.position)
 print(position1.get_full_name())
 print(position1.get_total_income())
