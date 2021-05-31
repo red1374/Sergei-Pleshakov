@@ -8,7 +8,7 @@ class DeadCellWithNegativeCores(Exception):
 
 
 class Cell:
-    def __init__(self, cores:int):
+    def __init__(self, cores: int):
         self.cores = cores
 
     def __add__(self, other):

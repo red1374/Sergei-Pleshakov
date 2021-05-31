@@ -49,11 +49,11 @@ class Costume(Clothes):
         self.__material = 2 * self.height + 0.3
 
 
-coat1 = Coat(6.5)
-print(coat1.material)
+# coat1 = Coat(6.5)
+# print(coat1.material)
 
-costume1 = Costume(2)
-print(costume1.material)
+# costume1 = Costume(2)
+# print(costume1.material)
 
 clothes1 = Clothes('Set 1')
 clothes1.add_coat(9)
