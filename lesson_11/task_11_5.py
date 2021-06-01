@@ -35,4 +35,3 @@ print(warehouse1.get_equipment('Printer'))
 department1.transfer_equipment(warehouse1, 'Xerox', 10)
 
 department1.transfer_equipment(warehouse1, 'Printer', 2)
-
